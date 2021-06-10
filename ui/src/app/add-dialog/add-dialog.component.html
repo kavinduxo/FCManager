@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>New Match</h1>
+<div mat-dialog-content>
+  <p style="text-align: center">{{ clubs.matchVs }}</p>
+  <p style="text-align: center">{{ clubs.result }}</p>
+  <p style="text-align: left"> * match Date: {{ clubs.dateAsString }}</p>
+  <p style="text-align: left"> * match Venue: {{ clubs.venue }}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close="">Close</button>
+  <button mat-button (click)="newMatch()" cdkFocusInitial>Save</button>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <h2 style="font-size: xxx-large; font-weight: bold; color: #bf00ff; font-family: Algerian,fantasy; text-align: center">Premier League 2021</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Club Name</th>
+      <th>Matches</th>
+      <th>Wins</th>
+      <th>Drawn</th>
+      <th>Lost</th>
+      <th style="color: darkred" >Goals Scored</th>
+      <th>Goals Conceded</th>
+      <th>Goals Diff</th>
+      <th>Points</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor= "let club of clubs">
+      <td>{{ club.name }}</td>
+      <td>{{ club.numberOfMatches }}</td>
+      <td>{{ club.numberOfWins }}</td>
+      <td>{{ club.numberOfDrawn }}</td>
+      <td>{{ club.numberOfLost }}</td>
+      <td style="color: crimson">{{ club.numberOfGoalsScored }}</td>
+      <td>{{ club.numberOfGoalsConceded }}</td>
+      <td>{{ club.goalDiff }}</td>
+      <td>{{ club.points }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

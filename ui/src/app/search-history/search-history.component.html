@@ -1,0 +1,34 @@
+<div class="container">
+  <h2 style="font-size: xxx-large; font-weight: bold; color: #bf00ff; font-family: Algerian,fantasy; text-align: center; margin-top: 100px">Search History!</h2>
+
+  <table>
+    <div style="padding-left: 250px; padding-bottom: 20px;">
+      <input type="date" #txt class="input-one">
+    </div>
+    <div style="padding-left: 280px; padding-bottom: 20px;">
+      <button (click)="getDate(txt)" class = "button-one" style="margin-left: 40px">Search</button>
+    </div>
+    <div style="height:600px; overflow:auto;">
+      <thead>
+      <tr>
+        <th>Match Date</th>
+        <th>Teams</th>
+        <th>Venue</th>
+        <th>Result</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <tr *ngFor= "let match of matches">
+        <td>{{ match.matchDate.date }}</td>
+        <td>{{ match.matchVs }}</td>
+        <td>{{ match.venue }}</td>
+        <td>{{ match.fResult }}</td>
+      </tr>
+
+      </tbody>
+    </div>
+  </table>
+  <h4>* Date is in MM-DD-YYYY format.</h4>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <h2 style="font-size: xxx-large; font-weight: bold; color: #bf00ff; font-family: Algerian,fantasy; text-align: center">Season History!</h2>
+  <table>
+    <div style="height:600px; overflow:auto;">
+    <thead>
+    <tr>
+      <th>Match Date</th>
+      <th>Teams</th>
+      <th>Venue</th>
+      <th>Result</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor= "let match of matches">
+          <td>{{ match.matchDate.date }}</td>
+          <td>{{ match.matchVs }}</td>
+          <td>{{ match.venue }}</td>
+          <td>{{ match.fResult }}</td>
+      </tr>
+
+    </tbody>
+    </div>
+  </table>
+  <h4>* Date is in MM-DD-YYYY format.</h4>
+</div>
